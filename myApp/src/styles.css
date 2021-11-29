@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+input {
+  margin-left: 1em;
+  margin-right: 1em;
+  min-width: 210px;
+}
+
+.custom-centered {
+  justify-content: center;
+}
+
+.table{
+  width: 60%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Angular CRUD</h1>
+  </div>
+  <div class="container">
+    <form class="form-inline custom-centered" name="itemForm">
+      <label for="item">Add an Item:</label>
+      <input type="text" class="form-control" name="Value" id="Value" #item>
+      <button type="submit" class="btn btn-md btn-success" (click)="create(item.value); item.value=''">Add</button>
+    </form>
+  </div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of collection; let id = index">
+      <td>{{item.name}}</td>
+      <td>
+        <button  class="btn btn-info btn-sm mr-1">Edit</button>
+        <button (click)="deleteItem(id)" class="btn btn-danger btn-sm">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
